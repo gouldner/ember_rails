@@ -20,6 +20,16 @@
 //= require easy_proposal
 
 // for more details see: http://emberjs.com/guides/application/
-EasyProposal = Ember.Application.create();
+EasyProposal = Ember.Application.create({
+  ready: function() {
+    $('#main-tabs a').click(function (e) {
+        alert("hi");
+        e.preventDefault()
+        $(this).tab('show')
+    });
+  }
+});
+
+
 
 //= require_tree .

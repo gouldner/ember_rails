@@ -8,6 +8,18 @@ EasyProposal.Router.map(function() {
   this.resource("proposal", { path: "/proposal/:id" });
 });
 
+EasyProposal.Router.map(function() {
+  this.resource("proposal_basics", { path: "/proposal/basics/:id" });
+});
+
+EasyProposal.Router.map(function() {
+  this.resource("proposal_people", { path: "/proposal/people/:id" });
+});
+
+EasyProposal.Router.map(function() {
+  this.resource("proposal_compliance", { path: "/proposal/compliance/:id" });
+});
+
 // redrect index route to proposals
 EasyProposal.IndexRoute = Ember.Route.extend({
   redirect: function() {
@@ -15,6 +27,3 @@ EasyProposal.IndexRoute = Ember.Route.extend({
   }
 });
 
-EasyProposal.Router.map(function() {
-  this.resource("proposal_basics");
-});
