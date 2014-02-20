@@ -1,31 +1,49 @@
+
+
+
 <div class="container">
+
+
   <div class="row clearfix">
-    <div class="col-md-12 column">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Welcome</h3>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">{{#link-to 'proposal_basics'}}Create a new proposal{{/link-to}}</li>
-        </ul>
-    </div> <!-- panel -->
-  </div> <!-- column -->
-  </div> <!-- row -->
-  <p>
-  <div class="row clearfix">
-    <div class="col-md-3 column">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Proposals</h3>
-        </div>
-        <ul class="list-group">
-          {{#each controller}}
-            <li class="list-group-item">{{#link-to 'proposal_basics' this.id}}{{title}}{{/link-to}}</li>
-          {{else}}
-            <li class="list-group-item">There are no proposals.</li>
-          {{/each}}
-        </ul>
-      </div> <!-- panel -->
+    <div class="col-md-offset-1 col-md-10 column">
+
+      <div class="jumbotron">
+        <h1>Starting a Proposal?</h1>
+        <p>Let us guide you through the process and get you on your way.</p>
+        <p><a class="btn btn-primary btn-lg" href="Proposal1.html">Create Proposal</a></p>
+      </div>
+
     </div> <!-- column -->
   </div> <!-- row -->
+  <p>
+
+
+
+  <div class="row clearfix">
+    <div class="col-md-offset-1 col-md-10 column">
+
+      <table id="proposals" class="table table-bordered">
+            <tr>
+              <th></th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Created</th>
+            </tr>
+            {{#each controller}}
+              <tr>
+                <td></td>
+                <td>{{#link-to 'proposal_basics' this.id}}{{title}}{{/link-to}}</td>
+                <td></td>
+                <td></td>
+              </tr>
+            {{else}}
+              <tr>You have not created an proposals with EasyProposal yet.</tr>
+            {{/each}}
+      </table>
+
+    </div> <!-- column -->
+  </div> <!-- row -->
+
+
+
 </div> <!-- container -->
