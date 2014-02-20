@@ -5,11 +5,9 @@ EasyProposal.Router.map(function() {
 });
 
 EasyProposal.Router.map(function() {
-  this.resource("proposal", { path: "/proposal/:id" });
-});
-
-EasyProposal.Router.map(function() {
-  this.resource("proposal_basics", { path: "/proposal/basics/:id" });
+  this.resource("proposal_basics", { 
+    path: "/proposal/basics/:id"
+  });
 });
 
 EasyProposal.Router.map(function() {

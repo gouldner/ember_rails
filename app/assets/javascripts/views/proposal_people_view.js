@@ -1,9 +1,8 @@
 // for more details see: http://emberjs.com/guides/views/
 
-EasyProposal.ProposalPeopleView = Ember.View.extend({
+EasyProposal.ProposalPeopleView = EasyProposal.ProposalBaseView.extend({
   templateName: 'proposal_people',
   tabs: [{ name: 'Basics', id: 'proposal_basics'},
-        { name: 'People', id: 'proposal_people', 'active': 'yes' },
+        { name: 'People', id: 'proposal_people', isActive: true},
         { name: 'Compliance', id: 'proposal_compliance'} ],
-  tab: 'proposal_people'
 });
