@@ -9,8 +9,10 @@
 
       <div class="jumbotron">
         <h1>Starting a Proposal?</h1>
-        <p>Let us guide you through the process and get you on your way.</p>
-        <p><a class="btn btn-primary btn-lg" href="Proposal1.html">Create Proposal</a></p>
+        <p>Let us guide you through the process.</p>
+        <p>{{#link-to 'proposal_basics'}}
+          <a class="btn btn-primary btn-lg">Create Proposal</a>
+        {{/link-to}}</p>
       </div>
 
     </div> <!-- column -->
@@ -22,24 +24,36 @@
   <div class="row clearfix">
     <div class="col-md-offset-1 col-md-10 column">
 
-      <table id="proposals" class="table table-bordered">
-            <tr>
-              <th></th>
-              <th>Title</th>
-              <th>Sponsor</th>
-              <th>Created</th>
-            </tr>
-            {{#each controller}}
-              <tr>
-                <td></td>
-                <td>{{#link-to 'proposal_basics' this.id}}{{title}}{{/link-to}}</td>
-                <td></td>
-                <td></td>
-              </tr>
-            {{else}}
-              <tr>You have not created an proposals with EasyProposal yet.</tr>
-            {{/each}}
-      </table>
+          {{#if controller}}
+
+            <table id="proposals" class="table table-bordered">
+              <thead>
+                  <tr>
+                    <th></th>
+                    <th {{action "sort" "title"}}>Title <span {{bind-attr class=":pull-right :glyphicon controller.sortImageClass"}}></span></th>
+                    <th>Sponsor</th>
+                    <th>Created</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {{#each controller}}
+                    <tr>
+                      <td></td>
+                      <td>{{#link-to 'proposal_basics' this.id}}{{title}}{{/link-to}}</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  {{else}}
+                    <tr>
+                      <td>You have not created an proposals with EasyProposal yet.</td>
+                    </tr>
+                  {{/each}}
+               </tbody>
+            </table>
+
+          {{/if}}
+
+
 
     </div> <!-- column -->
   </div> <!-- row -->
