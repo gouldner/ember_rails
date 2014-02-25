@@ -3,9 +3,9 @@
 <ul id="main-tabs" class="nav nav-tabs">
   {{#each tab in view.tabs}}
     <li {{bind-attr class="tab.isActive:active"}} >
-      {{#link-to tab.id 1}}
-        {{tab.name}}
-      {{/link-to}}
+        {{#link-to tab.id 1}}
+          {{tab.name}}
+        {{/link-to}}
     </li>
   {{/each}}
 </ul>

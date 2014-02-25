@@ -19,6 +19,10 @@
  * experimental below
  */
 
+body {
+  padding-top: 55px !important;
+}
+
 .jumbotron {
   text-align:center;
   background-color: transparent;
@@ -29,6 +33,30 @@ thead {
   background-color: #f2f2f2;
 }
 
+a.ep-button {
+  &:visited {
+    color: #fff !important;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
 
+a.ep-link {
 
+  &:visited {
+    color: #428bca !important;
+    background-color: #fff;
+  }
+  &:hover {
+    color: #428bca !important;
+    background-color: #fff;
+  }
+}
 
+.breadcrumbs {
+  line-height: 18px;
+  padding-bottom: 4px;
+}
+
+.navbar {min-height:40px !important}

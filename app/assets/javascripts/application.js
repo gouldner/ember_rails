@@ -27,7 +27,10 @@ EasyProposal = Ember.Application.create({
         e.preventDefault()
         $(this).tab('show')
     });
-  }
+  },
+  LOG_TRANSITIONS: true,
+  LOG_VIEW_LOOKUPS: true,
+  LOG_ACTIVE_GENERATION: true
 });
 
 

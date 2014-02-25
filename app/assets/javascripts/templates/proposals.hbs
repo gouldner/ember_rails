@@ -10,8 +10,8 @@
       <div class="jumbotron">
         <h1>Starting a Proposal?</h1>
         <p>Let us guide you through the process.</p>
-        <p>{{#link-to 'proposal_basics'}}
-          <a class="btn btn-primary btn-lg">Create Proposal</a>
+        <p>{{#link-to 'people' 0 class="btn btn-primary btn-lg ep-button"}}
+          Create Proposal
         {{/link-to}}</p>
       </div>
 
@@ -38,8 +38,8 @@
               <tbody>
                   {{#each controller}}
                     <tr>
-                      <td></td>
-                      <td>{{#link-to 'proposal_basics' this.id}}{{title}}{{/link-to}}</td>
+                      <td>{{#link-to 'people' this.id class="btn btn-primary btn-xs ep-button"}}Open{{/link-to}}</td>
+                      <td>{{title}}</td>
                       <td></td>
                       <td></td>
                     </tr>

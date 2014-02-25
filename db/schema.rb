@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140206230625) do
 
-  create_table "proposal_basics", force: true do |t|
+  create_table "basics", force: true do |t|
     t.string   "proposal_type"
     t.string   "lead_unit"
     t.string   "activity_type"
